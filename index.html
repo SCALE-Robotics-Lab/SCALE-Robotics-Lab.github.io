@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Rohan Paleja - Personal Academic Webpage</title>
-    <meta name="description" content="Personal Academic Webpage for Rohan Paleja - Single Page Layout">
+    <title>SCALE Robotics Lab @ Purdue University</title>
+    <meta name="description" content="SCALE Robotics Lab led by Dr. Rohan Paleja at Purdue University">
 
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"/>
@@ -31,88 +31,67 @@
         .content-section {
             padding-top: 30px; /* Adjust based on your fixed navbar height + desired spacing */
             padding-bottom: 20px;
-            /* Consider adding a light border-bottom if you want clear visual breaks:
-            border-bottom: 1px solid #eee; */
         }
 
         .content-section:last-of-type {
             border-bottom: none;
         }
+        /*.content {*/
+        /*    max-width: 1200px !important; */
+        /*}*/
+
+        /* Force all sections to stretch to this new, wider size so everything aligns */
+        .content-section.container {
+            max-width: 100% !important;
+        }
+
 
         /* Ensure anchor links with IDs are not obscured by the fixed navbar */
         .content-section::before {
             content: "";
             display: block;
-            height: 80px; /* Adjust to your navbar's height */
-            margin-top: -80px; /* Negative margin of the same height */
+            height: 80px;
+            margin-top: -80px;
             visibility: hidden;
+        }
+
+        /* Research Card Hover Effects */
+        .research-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+        }
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+            border-color: #b1b1b1;
+        }
+        /* CSS Grid for Research Areas */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+
+        /* Make it responsive for smaller screens */
+        @media (max-width: 991px) {
+            .research-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 575px) {
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 
 </head>
 <body>
-<!--<nav id="navbar" class="navbar fixed-top navbar-expand-md z-depth-1 navbar-light">-->
-<!--    <div class="container-fluid p-0">-->
-<!--        <div class="row ml-1 ml-sm-0">-->
-<!--          <span class="contact-icon text-center" style="line-height: 1em;">-->
-<!--            <a href="mailto:rohan.paleja@mit.edu"><i class="fa fa-envelope-square gm-icon"></i></a>-->
-<!--            <a href="https://scholar.google.com/citations?user=xjnQbKgAAAAJ&hl=en" target="_blank"-->
-<!--               title="Google Scholar"><i class="ai ai-google-scholar-square gs-icon"></i></a>-->
-<!--            <a href="https://github.com/rohanpaleja27" target="_blank" title="GitHub"><i-->
-<!--                    class="fab fa-github-square gh-icon"></i></a>-->
-<!--            <a href="https://www.linkedin.com/in/rohan-paleja-6370a3111/" target="_blank" title="LinkedIn"><i-->
-<!--                    class="fab fa-linkedin li-icon"></i></a>-->
-<!--            <a href="https://twitter.com/rohanpaleja27" target="_blank" title="Twitter"><i-->
-<!--                    class="fab fa-twitter-square tw-icon"></i></a>-->
-<!--          </span>-->
-<!--        </div>-->
-
-<!--        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"-->
-<!--                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse text-right" id="navbarNav">-->
-<!--            <ul class="navbar-nav ml-auto flex-nowrap">-->
-<!--                <li class="nav-item navbar-active font-weight-bold">-->
-<!--                    <a class="nav-link" href="#about-section">-->
-<!--                        About-->
-<!--                        <span class="sr-only">(current)</span>-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                 <li class="nav-item ">-->
-<!--                    <a class="nav-link" href="#news-section">-->
-<!--                        News-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item ">-->
-<!--                    <a class="nav-link" href="#projects-section">-->
-<!--                        Projects-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item ">-->
-<!--                    <a class="nav-link" href="#publications-section">-->
-<!--                        Publications-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item ">-->
-<!--                    <a class="nav-link" href="/assets/pdf/vitae.pdf" target="_blank">-->
-<!--                        Curriculum Vitae-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item ">-->
-<!--                    <a class="nav-link" href="#contact-section">-->
-<!--                        Contact-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
-
 
 <nav id="navbar" class="navbar fixed-top navbar-expand-md z-depth-1 navbar-light">
-    <div class="container"><a class="navbar-brand" href="#about-section" style="font-size: 1.2rem; font-weight: 500;">Rohan
-        Paleja</a>
+    <div class="container"><a class="navbar-brand" href="#about-section" style="font-size: 1.2rem; font-weight: 500;">SCALE Robotics Lab @ Purdue University</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -124,7 +103,7 @@
                     <a class="nav-link" href="#about-section">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#lab-section">Lab</a>
+                    <a class="nav-link" href="/team.html">Team</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#news-section">News</a>
@@ -133,14 +112,8 @@
                     <a class="nav-link" href="#publications-section">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#talks-section">Talks</a>
+                    <a class="nav-link" href="/join.html">Join</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#misc-section">Misc</a>
-                </li>
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="/assets/pdf/vitae.pdf" target="_blank">CV</a>-->
-<!--                </li>-->
             </ul>
         </div>
     </div>
@@ -153,106 +126,85 @@
 </progress>
 
 <div class="content">
+
     <section id="about-section" class="content-section container">
-        <!--        <div class="row">-->
-        <!--            <div class="col-12 p-0 pt-4 pb-4">-->
-        <!--                <h1 class="pb-3 title text-left font-weight-bold">Rohan Paleja</h1>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <div class="row">
-            <div class="col-md-8">
-                <p class="extra-bold">
-                    I am an Assistant Professor in the Department of Computer Science at Purdue University.
+        <div class="row align-items-center">
+            <div class="col-md-7">
+<!--                <h1 class="display-4 font-weight-bold mb-3" style="font-size: 2.5rem;">SCALE Robotics Lab</h1>-->
+                <p class="lead extra-bold text-muted">
+                    Strategies for Collaboration, Autonomy, Learning, and Exploration in Robotics Lab <br>
+                    Director: Dr. Rohan Paleja
                 </p>
-<!--                <p style="font-size: 14px;">-->
-<!--                    Until Fall 2025, I will continue in my role as a Technical Staff Researcher in the Artificial-->
-<!--                    Intelligence-->
-<!--                    Technology Group at MIT Lincoln-->
-<!--                    Laboratory.-->
-<!--                    &lt;!&ndash;                    , investigating new approaches to help operators understand, program, utilize, and team&ndash;&gt;-->
-<!--                    &lt;!&ndash;                    with&ndash;&gt;-->
-<!--                    &lt;!&ndash;                    autonomous systems, ranging from large language models to symbolic agents.&ndash;&gt;-->
-<!--                </p>-->
-                <p style="font-size: 14px;">Across my research, I focus on developing novel machine-learning
-                    architectures and algorithms to
-                    support robot learning and human-robot collaboration in the diverse and unstructured environments
-                    that will be encountered by these agents in the real world.
-<!--                    My research has received-->
-<!--                    a Best Paper Finalist Award at the Conference of Robot Learning (CoRL) and-->
-<!--                    a Best Workshop Paper Award at the International Conference of Computer Vision (ICCV) Multi-Agent-->
-<!--                    Relational Reasoning Workshop.-->
+
+                <p style="font-size: 14px;">Our lab advances machine learning and artificial intelligence to improve robot learning, human-robot interaction, and multi-agent coordination.
+
                 </p>
-                <p style="font-size: 14px;">
-                    Prior, I was a Technical Staff Researcher in the Artificial
-                    Intelligence
-                    Technology Group at MIT Lincoln
-                    Laboratory. I completed my Ph.D. in Robotics at the Georgia Institute of Technology, advised by
-                    Matthew
-                    Gombolay.
-                    Prior to that, I received my M.Sc. in
-                    Mechanical
-                    Engineering at Rutgers University in 2018, and a B.Sc. in Mechanical Engineering with a
-                    concentration in Aerospace Engineering at Rutgers University in 2017.
-                </p>
+                <ul class="mt-3 mb-4" style="font-size: 15px;">
+                    <li><strong>Interactive Robot Learning:</strong> Developing computational approaches to help humans teach new behaviors or correct existing ones.</li>
+                    <li><strong>Explainable Robotics:</strong> Imbibing robotic systems with decision-making capabilities that can be understood, traced, and trusted by humans.</li>
+                    <li><strong>Multi-Agent Coordination:</strong> Developing methods that enable teams of robots and humans to communicate and collaborate in complex environments.</li>
+                </ul>
+                <div class="mt-4">
+                    <a href="/join.html" class="btn btn-primary mr-2">Join the Lab</a>
+                    <a href="#publications-section" class="btn btn-outline-dark">Our Research</a>
+                </div>
             </div>
-            <!--            <div class="col-md-4 text-center">-->
-            <!--                <img class="profile-img img-responsive" src="assets/img/paleja_phd.jpg" alt="Rohan Paleja" align="middle" height="200px" style="width: auto; margin-top: .1px;">-->
-            <!--            </div>-->
-            <div class="col-md-4 text-center">
-                <img class="profile-img img-fluid" src="assets/img/paleja_prof.jpg" alt="Rohan Paleja">
+            <div class="col-md-5 text-center mt-4 mt-md-0">
+                <img src="/assets/img/lab_logo.png" class="img-fluid rounded shadow-sm" alt="SCALE Robotics Lab Logo" style="max-height: 350px;">
             </div>
         </div>
     </section>
 
-    <section id="lab-section" class="content-section container">
-    <h3 class="title text-left lab-heading-with-logo">
-        <span>Strategies for Collaboration, Autonomy, Learning, and Exploration in Robotics Lab
-            (SCALE Robotics Lab)</span>
-        <img src="/assets/img/scale_logo.png" alt="SCALE Robotics Lab Logo">
-    </h3>
-        <p>Our lab focuses on advancing <b>machine learning</b> and <b>artificial intelligence</b> to improve <b>robot
-            learning</b>,
-            <b>human-robot interaction</b>, and <b>multi-agent collaboration</b>. </p>
-        <ul>
-            <li><strong>Interactive Robot Learning and Algorithmic Human-Robot Interaction: </strong> Developing new
-                computational approaches to help humans
-                interact with robots and teach new behaviors or correct existing behaviors.
-            </li>
-            <li><strong>Explainable Robotics:</strong> Imbibing intelligent robotic systems with decision-making
-                capabilities and
-                behaviors that can be understood, traced, and trusted by humans, especially in critical settings like
-                healthcare, defense, and disaster response.
-            </li>
-            <li><strong>Multi-Agent Coordination and Information Sharing:</strong> Developing methods that enable teams
-                of robots and humans to communicate, collaborate, and make decisions together in complex, dynamic
-                environments.
-            </li>
-        </ul>
-        <h5>Openings</h5>
-        <p class="extra-bold-blue">
-                    Our lab has multiple openings. See instructions on applying below.
-        </p>
-        <p style="font-size: 16px;  color: #FF0000">
-            <b>I'm looking for technically strong and self-motivated students (at all levels) to join my lab.</b> For
-            PhD students with an application deadline in December 2025, please apply to Purdue CS, and mention my name in
-            your application (you are welcome to shoot me an email early at rpaleja {at} purdue.edu). For other
-            roles, please reach out directly and email your CV.
-        </p>
+<section id="research-areas-section" class="content-section container mt-4">
+        <h2 class="title text-left mb-4">Research Areas</h2>
 
-        <p>
-            <b style="font-weight: 600">Admitted Purdue PhD Students</b> If you have already been admitted and are looking for an advisor, please
-            email me directly. I am able to directly advise students in the CS department and can co-advise students in other departments. <br>
+        <div class="row w-100 mx-0">
 
-            <b style="font-weight: 600">Masters/Undergraduate students:</b> If you are interested in working with me, please send me an email with your
-            CV and a brief description of your interests, and include [Prospective Masters/Undergraduate Student] in the subject respectively.
-            I am looking for students who are passionate about robotics
-            and AI, and who are eager to learn and contribute to our research projects.
+            <div class="col-lg-3 col-md-6 mb-4 px-2">
+                <div class="card research-card shadow-sm text-center p-3 h-100" style="width: 100%; max-width: none; cursor: pointer;" data-topic="learning from demonstration">
+                    <div class="card-body p-2 d-flex flex-column">
+                        <i class="fas fa-robot fa-3x mb-3 text-info"></i>
+                        <h5 class="card-title font-weight-bold mb-3">Imitation Learning</h5>
+                        <p class="card-text text-muted small mt-auto mb-0">Learning from demonstration and interactive robot learning frameworks.</p>
+                    </div>
+                </div>
+            </div>
 
-        </p>
+            <div class="col-lg-3 col-md-6 mb-4 px-2">
+                <div class="card research-card shadow-sm text-center p-3 h-100" style="width: 100%; max-width: none; cursor: pointer;" data-topic="explainable ai">
+                    <div class="card-body p-2 d-flex flex-column">
+                        <i class="fas fa-brain fa-3x mb-3 text-success"></i>
+                        <h5 class="card-title font-weight-bold mb-3">Explainable AI</h5>
+                        <p class="card-text text-muted small mt-auto mb-0">Interpretable AI, transparent policies, and rigorous system validation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 px-2">
+                <div class="card research-card shadow-sm text-center p-3 h-100" style="width: 100%; max-width: none; cursor: pointer;" data-topic="multi-agent reinforcement learning">
+                    <div class="card-body p-2 d-flex flex-column">
+                        <i class="fas fa-network-wired fa-3x mb-3 text-warning"></i>
+                        <h5 class="card-title font-weight-bold mb-3">Multi-Agent RL</h5>
+                        <p class="card-text text-muted small mt-auto mb-0">Heterogeneous multi-agent coordination, reinforcement learning, and communication.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4 px-2">
+                <div class="card research-card shadow-sm text-center p-3 h-100" style="width: 100%; max-width: none; cursor: pointer;" data-topic="human-machine teaming">
+                    <div class="card-body p-2 d-flex flex-column">
+                        <i class="fas fa-users-cog fa-3x mb-3 text-danger"></i>
+                        <h5 class="card-title font-weight-bold mb-3">Human-Machine Teaming</h5>
+                        <p class="card-text text-muted small mt-auto mb-0">Algorithmic HRI, ad hoc teaming, and mutual understanding architectures.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
 
-    <section id="news-section" class="content-section container">
+    <section id="news-section" class="content-section container mt-4">
         <h2 class="title text-left">Recent News</h2>
         <ul class="news-list">
             {% assign news_items = site.data.news %}
@@ -271,15 +223,6 @@
         </p>
         {% endif %}
     </section>
-
-    <!--    <section id="projects-section" class="content-section container"> -->
-    <!--         <h2 class="title mb-4 p-0 text-center">Projects</h2>-->
-    <!--        <div class="row">-->
-    <!--            <div class="col-12">-->
-    <!--                <p class="text-center">Your project content will go here. Please copy it from your projects page.</p>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </section>-->
 
     <section id="publications-section" class="content-section container">
         <h2 class="title text-left">Publications</h2>
@@ -392,6 +335,12 @@
                            target="_blank">{{ link.name }}</a>
                         {% endif %}
                         {% endfor %}
+
+                        {% if pub.bibtex %}
+                        <a class="badge grey waves-effect font-weight-light mr-1" data-toggle="collapse"
+                           href="#{{ pub.id }}-bibtex" role="button" aria-expanded="false"
+                           aria-controls="{{ pub.id }}-bibtex">BibTeX</a>
+                        {% endif %}
                     </div>
 
                     {% comment %} START: Add GitHub iframe buttons if github_repo is defined {% endcomment %}
@@ -419,6 +368,12 @@
                         </div>
                     </div>
                     {% endif %}
+
+                    {% if pub.bibtex %}
+                    <div class="collapse publication-abstract-collapse" id="{{ pub.id }}-bibtex">
+                        <div class="card card-body p-3 mb-2" style="font-size: 0.85rem; background-color: #f1f1f1; font-family: monospace; white-space: pre-wrap;">{{ pub.bibtex }}</div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
             <hr class="w-100 d-md-none mb-4">
@@ -426,100 +381,7 @@
         </div>
     </section>
 
-
-    <section id="talks-section" class="content-section container">
-        <h2 class="title text-left">Talks</h2>
-        <!--        <p>List of invited talks, guest lectures, etc...</p>-->
-        <ul>
-            <li>[02/2025] Invited Talk at the Carnegie Mellon University Human-Robot Interaction Reading Group</li>
-            <li>[02/2024] Invited Talk at the Carnegie Mellon University Safe AI Lab</li>
-            <li>[01/2024] Invited talk at the Transformative Science and Technology Lecture Series at Temple
-                University
-            </li>
-            <li>[06/2023] Invited talk at the Robot Learning Seminar hosted by Mila and the Robotics and Embodied AI
-                Lab
-            </li>
-            <li>[02/2023] Invited Talk, Brown University. Providence, RI 02912, USA</li>
-        </ul>
-    </section>
-
-    <section id="misc-section" class="content-section container">
-        <h2 class="title text-left">Misc</h2>
-        <!--        <p>Any other relevant information, hobbies, links, etc.</p>-->
-
-        <h5 class="title text-left">Honors and Awards</h5>
-        <ul>
-            <li>[2023] Sponsorship Award for our ICRA 2023 Explainable Robotics Workshop</li>
-            <li>[2021] Interactive Computing Graduate Teaching Assistant of the Year</li>
-            <li>[2021] Best Workshop Paper Award, International Conference on Computer Vision (ICCV) Workshop
-                on Multi-Agent Interaction and Relational Reasoning
-            </li>
-            <li>[2020] Best Paper Finalist Award, Conference of Robot Learning (CoRL)</li>
-        </ul>
-
-        <h5 class="title text-left">Professional Service</h5>
-        <ul>
-            <li>Workshop Organizer, CoRL 2023 Workshop on Robot Learning in Athletics, Atlanta, Georgia, USA
-            </li>
-            <li>Public Relations Vice President, Executive Board of the Robotics Graduate Student
-                Organization, Georgia Institute of Technology
-            </li>
-            <li>Workshop Organizer, ICRA 2023 Workshop on Explainable Robotics, London, United King-
-                dom
-            </li>
-            <li>Sponsorship Chair, Human-Robot Interaction (HRI) 2020 Pioneers Workshop, Cambridge,
-                United Kingdom
-            </li>
-        </ul>
-
-        <h5 class="title text-left">Press coverage</h5>
-        <ul>
-            <li><strong>This tennis-playing robot could one day win Wimbledon</strong> |
-                <a href="https://www.usatoday.com/videos/tech/2023/06/27/could-robot-future-wimbledon-champ-some-developers-say-yes/12172883002/">USA
-                    Today</a> |
-                <a href="https://spectrum.ieee.org/video-friday-biological-end-effectors">IEEE Spectrum</a> |
-                <a href="https://tylerpaper.com/news/national/this-tennis-playing-robot-could-one-day-win-wimbledon/article_cbbd6328-0522-5dee-8202-8f44ed8f5391.html">Tyler
-                    Morning Paragraph</a> |
-                <a href="https://www.newsontheneck.com/news/national/this-tennis-playing-robot-could-one-day-win-wimbledon/article_3f7aeadb-31f9-5f66-8176-f109a5544ca9.html">News
-                    on the Neck</a> |
-                <a href="https://www.hartfordcitynewstimes.com/news/nation/this-tennis-playing-robot-could-one-day-win-wimbledon/article_5ed2e3b1-fd7e-5319-9d21-d01cbc8fff14.html">The
-                    News Times</a> |
-                <a href="https://www.kulr8.com/news/national/this-tennis-playing-robot-could-one-day-win-wimbledon/article_5b8f244e-94ff-5a5b-a0ca-1b4f9bb81849.html">Talker
-                    News</a> |
-                <a href="https://www.dailymail.co.uk/sciencetech/article-12237785/Watch-ROBOT-tennis-player-zips-court-ahead-Wimbledon.html">Daily
-                    Mail</a> |
-                <a href="https://metro.co.uk/video/meet-tennis-robot-tipped-win-wimbledon-one-day-2967935/">Metro UK</a>
-                |
-                <a href="https://helenair.com/news/nation-world/robot-tennis-player-will-soon-outmaneuver-human-opponents/video_4d6b8217-f246-5de2-af7f-3d90717bd4d5.html">Independent
-                    Record</a> |
-                <a href="https://kenoshanews.com/news/robot-tennis-player-will-soon-outmaneuver-human-opponents/video_cd89aade-7025-5eff-8f64-78ba94754c17.html">Kenosha
-                    News</a> |
-                <a href="https://www.tennis.com/baseline/articles/meet-esther-your-new-tennis-playing-robot-partner">Tennis</a>
-            </li>
-            <li><strong>Tennis Robot Could Pave Way for Advancement in Fast-Movement Robotics</strong>
-                <a href="https://www.youtube.com/watch?time_continue=6&v=plUktbRLfQw&embeds_euri=https%3A%2F%2Fwww.cc.gatech.edu%2F&source_ve_path=Mjg2NjQsMjM4NTE&feature=emb_title">Video</a>
-                |
-                <a href="https://www.cc.gatech.edu/news/tennis-robot-could-pave-way-advancement-fast-movement-robotics?utm_source=newsletter&utm_medium=email&utm_content=Tennis%20Robot%20Could%20Pave%20Way%20for%20Advancement%20in%20Fast-Movement%20Robotics&utm_campaign=Daily%20Digest%20-%20April%2014%2C%202023">Blog</a>
-                |
-                <a href="https://mashable.com/video/robot-tennis-esther">Mashable</a> |
-                <a href="https://www.iotworldtoday.com/robotics/tennis-playing-robot-could-to-help-with-athlete-training">IOT
-                    World Today</a> |
-                <a href="https://interestingengineering.com/innovation/georgia-tech-team-unveils-autonomous-tennis-robot-to-help-you-beat-your-foes">Interesting
-                    Engineering</a> |
-                <a href="https://www.watson.ch/videos/wissen/335336438-bald-kannst-du-vielleicht-tennis-mit-diesem-roboter-spielen?utm_source=ground.news&utm_medium=referral">Watson</a>
-            </li>
-            <li><strong>Georgia Tech Researchers Teach a Robot How to Improve at Ping Pong on Its Own</strong>
-                <a href="https://www.youtube.com/watch?v=tjGEoe33HAg">Video</a> |
-                <a href="https://ic.gatech.edu/news/646279/robot-learned-table-tennis-approach-could-be-game-changer-future-robot-assistants">Blog</a><br>
-            </li>
-            <li><strong>Georgia Tech Researchers Use Table Tennis to Understand Human-Robot Dynamics</strong>
-                <a href="https://t.e2ma.net/click/vsossg/75akffg/voh8su">Blog</a>
-            </li>
-        </ul>
-    </section>
-
-
-    <section id="contact-section" class="content-section container">
+    <section id="contact-section" class="content-section container mb-5">
         <h2 class="title mb-4 p-0 text-center">Get In Touch</h2>
         <div class="row">
             <div class="col-md-8 offset-md-2 text-center">
@@ -546,10 +408,10 @@
 
 </div>
 
-<footer>
-    &copy; Copyright
-    <script>document.write(new Date().getFullYear())</script>
-    Rohan Paleja.
+<footer class="text-center py-4 bg-light mt-auto">
+    <div class="container">
+        <small class="text-muted">&copy; Copyright <script>document.write(new Date().getFullYear())</script> SCALE Robotics Lab | Purdue University.</small>
+    </div>
 </footer>
 
 <script src="/assets/js/jquery.min.js" type="text/javascript"></script>
@@ -623,16 +485,6 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <script src="/assets/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
-<script type="text/javascript">
-    // This script will apply to the #projects-section if you structure its content
-    // with an element having the ID "projects" (e.g., <div id="projects" class="row">...</div>)
-    var $grid = $('#projects'); // This targets an element with ID 'projects'
-    $grid.imagesLoaded().progress(function () {
-        $grid.masonry({percentPosition: true});
-        // $grid.masonry('layout'); // layout is often called automatically after init with imagesLoaded
-    });
-</script>
 
 <script type="text/javascript">
     $(function () {
@@ -867,137 +719,46 @@
             }
         });
 
-        // --- 4. Initial Page Load ---
-        // The HTML already sets 'showSelectedButton' and 'topic-filter-all' to active.
-        // This call will respect those initial active classes.
+        /* --- NEW LOGIC: Research Areas Click Handler --- */
+        const researchCards = document.querySelectorAll('.research-card');
+        researchCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                const targetTopic = this.dataset.topic;
+
+                // Switch off "Selected Only" so the user can see all papers for this topic
+                if(showSelectedButton.classList.contains('active')) {
+                    showSelectedButton.classList.remove('active');
+                    showAllButton.classList.add('active');
+                }
+
+                // Programmatically click the corresponding topic in the dropdown filter
+                const topicLinks = topicFilterContainer.querySelectorAll('.topic-filter, .topic-filter-all');
+                topicLinks.forEach(el => el.classList.remove('active'));
+
+                const targetLink = Array.from(topicLinks).find(el => el.dataset.topic === targetTopic);
+                if (targetLink) {
+                    targetLink.classList.add('active');
+                    topicDropdownButton.textContent = targetLink.textContent;
+                }
+
+                // Apply the filters to update the list immediately
+                applyFiltersAndDisplay();
+
+                // Smooth scroll down to the publications section
+                const pubSection = document.getElementById('publications-section');
+                if (pubSection) {
+                    const navbarHeight = document.getElementById('navbar').offsetHeight || 80;
+                    const targetPosition = pubSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 20;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
         applyFiltersAndDisplay();
     });
-
-    //     document.addEventListener('DOMContentLoaded', function () {
-    //         const publicationsContainer = document.getElementById('publication-list-container');
-    //         const allPublicationEntries = Array.from(publicationsContainer.querySelectorAll('.publication-entry'));
-    //         const searchBox = document.getElementById('publicationSearch');
-    //         const topicFilterContainer = document.getElementById('topicFilterContainer');
-    //
-    //         // --- 1. Populate Topic Filters ---
-    //         let topics = new Set();
-    //         allPublicationEntries.forEach(entry => {
-    //             entry.dataset.topics.split(',').forEach(topic => {
-    //                 if (topic.trim()) topics.add(topic.trim());
-    //             });
-    //         });
-    //         topics.forEach(topic => {
-    //             const a = document.createElement('a');
-    //             a.classList.add('dropdown-item', 'topic-filter');
-    //             a.href = '#';
-    //             a.dataset.topic = topic;
-    //             a.textContent = topic.charAt(0).toUpperCase() + topic.slice(1); // Capitalize
-    //             topicFilterContainer.appendChild(a);
-    //         });
-    //
-    //         // --- Function to render/filter publications ---
-    // function filterAndDisplayPublications(searchTerm = '', sortBy = 'year_desc', filterTopic = 'all', showSelected = false) {
-    //     let filtered = [...allPublicationEntries]; // Ensure allPublicationEntries is correctly populated
-    //
-    //     console.log("--- Filtering ---");
-    //     console.log("Search Term:", searchTerm);
-    //     console.log("Sort By:", sortBy);
-    //     console.log("Filter Topic:", filterTopic);
-    //     console.log("Show Selected:", showSelected);
-    //     console.log("Initial entries to filter:", allPublicationEntries.length);
-    //
-    //     // Search
-    //     if (searchTerm) {
-    //         filtered = filtered.filter(entry =>
-    //             (entry.dataset.title || '').includes(searchTerm) ||
-    //             (entry.dataset.authors || '').includes(searchTerm) ||
-    //             (entry.dataset.venue || '').includes(searchTerm) ||
-    //             (entry.dataset.abstract || '').includes(searchTerm) ||
-    //             (entry.dataset.year || '').includes(searchTerm)
-    //         );
-    //     }
-    //     console.log("After search filter:", filtered.length);
-    //
-    //     // Filter by Topic
-    //     if (filterTopic !== 'all') {
-    //         filtered = filtered.filter(entry => (entry.dataset.topics || '').includes(filterTopic));
-    //     }
-    //     console.log("After topic filter:", filtered.length);
-    //
-    //     // Filter by Selected
-    //     if (showSelected) {
-    //         console.log("Applying 'selected' filter. Expecting data-selected='true'");
-    //         filtered = filtered.filter(entry => {
-    //             const isSelected = entry.dataset.selected === 'true';
-    //             // Optional: log each item being checked for 'selected'
-    //             // console.log(`Item: ${entry.dataset.title}, data-selected: ${entry.dataset.selected}, Is Selected: ${isSelected}`);
-    //             return isSelected;
-    //         });
-    //     }
-    //     console.log("After selected filter:", filtered.length);
-    //
-    //
-    //     // Sort (Placeholder - ensure this doesn't break anything if not fully implemented)
-    //     // if (sortBy === 'date') { ... }
-    //
-    //     // Hide all, then show filtered
-    //     allPublicationEntries.forEach(entry => entry.classList.add('publication-hidden'));
-    //     if (filtered.length > 0) {
-    //         filtered.forEach(entry => entry.classList.remove('publication-hidden'));
-    //     } else {
-    //         console.log("No publications match the current filters.");
-    //         // Optionally, display a "No results found" message in publicationsContainer
-    //     }
-    // }
-    //
-    //         // Initial display
-    //         // filterAndDisplayPublications();
-    //
-    //         // --- 2. Search Functionality ---
-    //         searchBox.addEventListener('input', function (e) {
-    //             const searchTerm = e.target.value.toLowerCase();
-    //             // Get current filters/sorts to maintain them
-    //             const currentTopic = document.querySelector('.topic-filter.active')?.dataset.topic || 'all';
-    //             const currentSelected = document.querySelector('button[data-filter="selected"].active') ? true : false;
-    //             filterAndDisplayPublications(searchTerm, 'year_desc', currentTopic, currentSelected);
-    //         });
-    //
-    //         // --- 3. Sort by Date ---
-    //         document.querySelector('button[data-sort="date"]').addEventListener('click', function () {
-    //             // This is simplified. True client-side sorting based on year would involve:
-    //             // 1. Get all visible .publication-entry elements.
-    //             // 2. Sort them using their data-year attribute.
-    //             // 3. Re-append them to publicationsContainer in the new order.
-    //             // For now, the Liquid sort is the primary date sort.
-    //             // You could toggle between ascending/descending here.
-    //             alert("Client-side date sorting would be implemented here. Currently sorted by Jekyll.");
-    //         });
-    //
-    //         // --- 4. Filter by Topic ---
-    //         topicFilterContainer.addEventListener('click', function (e) {
-    //             if (e.target.classList.contains('topic-filter') || e.target.classList.contains('topic-filter-all')) {
-    //                 e.preventDefault();
-    //                 document.querySelectorAll('.topic-filter, .topic-filter-all').forEach(el => el.classList.remove('active'));
-    //                 e.target.classList.add('active');
-    //                 const topic = e.target.dataset.topic;
-    //                 const searchTerm = searchBox.value.toLowerCase();
-    //                 const currentSelected = document.querySelector('button[data-filter="selected"].active') ? true : false;
-    //                 filterAndDisplayPublications(searchTerm, 'year_desc', topic, currentSelected);
-    //                 document.getElementById('topicDropdown').textContent = topic === 'all' ? 'Filter by Topic' : e.target.textContent;
-    //             }
-    //         });
-    //
-    //         // --- 5. Show Selected ---
-    //         const selectedButton = document.querySelector('button[data-filter="selected"]');
-    //         selectedButton.addEventListener('click', function () {
-    //             this.classList.toggle('active'); // Toggle active state for the button
-    //             const showSelected = this.classList.contains('active');
-    //             const searchTerm = searchBox.value.toLowerCase();
-    //             const currentTopic = document.querySelector('.topic-filter.active')?.dataset.topic || 'all';
-    //             filterAndDisplayPublications(searchTerm, 'year_desc', currentTopic, showSelected);
-    //         });
-    //     });
-
 </script>
 </body>
 </html>

@@ -124,6 +124,13 @@
     improve collaboration.
   topics: [ "Human-Machine Teaming", "Explainable AI" ]
   selected: true
+  bibtex: |
+    @inproceedings{paleja2024designs,
+      title={Designs for Enabling Collaboration in Human-Machine Teaming via Interactive and Explainable Systems},
+      author={Paleja, Rohan and Munje, Michael and Chang, Kimberlee and Jensen, Reed and Gombolay, Matthew},
+      booktitle={Advances in Neural Information Processing Systems},
+      year={2024}
+    }
   equal_contribution: false # Assuming, adjust if needed
 
 # Item 3 (hurley2024NeurIPS from your HTML)
