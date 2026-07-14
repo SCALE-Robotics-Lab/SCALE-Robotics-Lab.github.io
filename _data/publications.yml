@@ -73,6 +73,29 @@
   equal_contribution: false
 
 # Item 3
+- id: sheng2026aims
+  image: /assets/img/publications/sheng2026aims.png
+  title: "Influence-Salient Coordination Shaping for Scalable Cooperative MARL"
+  authors:
+    - name: "Wei Sheng"
+    - name: "Rohan Paleja"
+  venue_short: "ICLR W."
+  venue_full: "ICLR 2026 Workshop on AI for Mechanism Design and Strategic Decision Making"
+  year: 2026
+  badge_class: "pink darken-1"
+  badge_url: "https://alimama-tech.github.io/aims-2026/#"
+  links:
+    - name: "Abstract"
+      url: "#sheng2026aims-abstract"
+    - name: "PDF"
+      url: "https://openreview.net/pdf?id=DYhUVbmBFT"
+  abstract: |
+    Interaction-driven coordination is central to real-world teamwork, yet cooperative multi-agent reinforcement learning often struggles to induce it. This difficulty compounds as agent populations scale, since decentralized learning and weak credit assignment under combinatorial interaction structures can yield brittle, loosely coupled routines with limited mutual responsiveness. To tackle these challenges, we propose Influence-Salient Coordination Shaping (ISCS), a scalable shaping mechanism for learning team coordination in cooperative multi-agent systems. ISCS identifies influence-salient choices by selecting actions that maximize expected transition displacement in a learned representation space, then computes a directed, baseline-adjusted uplift-based shaping bonus that rewards actions increasing the likelihood of subsequent teammate coordination beyond what the joint observation alone predicts. To reduce timing sensitivity, ISCS optimizes uplift over a short-horizon coordination event rather than requiring an immediate next-step response, improving robustness to delayed responses and reducing spurious attribution from state-induced correlations. Experiments on challenging cooperative benchmarks show that adding ISCS to standard CTDE methods improves sample efficiency and final performance over strong baselines.
+  topics: [ "Multi-Agent Reinforcement Learning", "Human-Machine Teaming" ]
+  selected: true
+  equal_contribution: false
+
+# Item 4
 - id: zoellner2026temporal
   image: /assets/img/publications/zoellner2026temporal.png
   title: "Temporal Logic Guidance for Action-Only Diffusion Policies with World Models"
