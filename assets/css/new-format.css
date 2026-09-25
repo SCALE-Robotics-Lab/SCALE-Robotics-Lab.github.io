@@ -651,3 +651,18 @@ button[data-filter="selected"].active {
 footer {
     z-index: 2000;
 }
+
+/* Paper titles nested within a news announcement. */
+.news-list .news-paper-list {
+    margin: 0.35em 0 0;
+    padding-left: 1.5em;
+    list-style-type: circle;
+}
+
+.news-list .news-paper-list > li {
+    margin-bottom: 0.2em;
+}
+
+.news-list .news-paper-list > li:last-child {
+    margin-bottom: 0;
+}

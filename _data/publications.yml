@@ -1,74 +1,3 @@
-# Item 0
-- id: sane2026a
-  image: /assets/img/publications/aarav2026arxiv.png # REPLACE with actual image path
-  title: "Differentiable Belief-Based Opponent Shaping"
-  authors:
-    - name: "Aarav Sane"
-    - name: "Karthik Sivachandran"
-    - name: "Rohan Paleja"
-  venue_short: "arXiv"
-  venue_full: "arXiv CS."
-  year: 2026
-  bibtex: |
-    @misc{sane2026a,
-      title = {Differentiable Belief-Based Opponent Shaping},
-      author = {Aarav Sane and Karthik Sivachandran and Rohan Paleja},
-      howpublished = {{arXiv} preprint {arXiv}:2605.29042},
-      eprint = {2605.29042},
-      archivePrefix = {arXiv},
-      year = {2026},
-      url = {https://arxiv.org/pdf/2605.29042}
-    }
-  badge_class: "pink darken-1"
-  badge_url: "https://arxiv.org/archive/cs"
-  links:
-    - name: "Abstract" # For collapse trigger
-      url: "#sane2026arxiv-abstract"
-    - name: "PDF" # Add PDF link when available
-      url: "https://arxiv.org/pdf/2605.29042"
-  abstract: |
-    Human coordination often relies on the ability to influence the beliefs of others through strategic action. In multi-agent reinforcement learning, opponent shaping attempts to replicate this influence, though existing methods typically operate within an opponent's parameter, policy, or value space. Meanwhile, belief-manipulation techniques in hidden-role games often rely on hard-coded objectives, such as deception or belief saturation. We propose Differentiable Belief-based Opponent Shaping (D-BOS), a first-order method that treats each observer's belief as the shaped opponent state and differentiates through $k$-step softmax-Bayes belief dynamics. Rather than explicitly rewarding deceptive or cooperative behavior, our method treats the belief state as the target for shaping. This allows the optimal strategy to emerge naturally from the environment's reward structure. This belief-space formulation provides an opponent-shaping signal by differentiating through opponent belief updates, and naturally extends to multiple observers by aggregating gradients over their individual inferred belief trajectories. Empirically, D-BOS outperforms PPO and BBM in hidden-role games, with the largest gains in mixed-motive settings.
-  topics: [ "Human-Machine Teaming" ]
-  selected: true
-  equal_contribution: false
-
-# Item 1
-- id: jin2026arxiv
-  image: /assets/img/publications/jin2026arxiv.png
-  title: "Event-Grounded Sparse Autoencoders for Vision-Language-Action Policies"
-  authors:
-    - name: "Xinchen Jin"
-    - name: "Aditya Chatterjee"
-    - name: "Pranav Kumar"
-    - name: "Rohan Paleja"
-  venue_short: "arXiv"
-  venue_full: "arXiv CS."
-  year: 2026
-  bibtex: |
-    @misc{jin2026arxiv,
-      title = {Event-Grounded Sparse Autoencoders for Vision-Language-Action Policies},
-      author = {Xinchen Jin and Aditya Chatterjee and Pranav Kumar and Rohan Paleja},
-      howpublished = {{arXiv} preprint {arXiv}:2605.17204},
-      eprint = {2605.17204},
-      archivePrefix = {arXiv},
-      year = {2026},
-      url = {https://arxiv.org/pdf/2605.17204}
-    }
-  badge_class: "pink darken-1"
-  badge_url: "https://arxiv.org/archive/cs"
-  links:
-    - name: "Abstract"
-      url: "#jin2026arxiv-abstract"
-    - name: "PDF"
-      url: "https://arxiv.org/pdf/2605.17204"
-    - name: "Code"
-      url: "https://github.com/xc-j/Event-SAE"
-  abstract: |
-    Vision-Language-Action (VLA) policies translate language and visual inputs into robot actions, where their hidden representations directly shape closed-loop behavior. However, mechanistic interpretability tools from language and vision-language models do not transfer cleanly to VLAs: outputs are robot actions rather than human-readable tokens, and interventions can only be tested via expensive closed-loop rollouts. We propose an event-grounded interpretability pipeline that anchors SAE feature analysis to behavioral events rather than text contexts. End-effector keyframes are clustered within each task using visual, state, and temporal cues, linking SAE features to behaviorally salient events and, via optional VLM annotations, to semantic context. To our knowledge, our pipeline is among the first to ground SAE-based VLA analysis in closed-loop behavioral events. Across two simulation architectures and a real-robot study, event-grounded ranking yields the strongest causal effects on OpenVLA and transfers to the continuous action chunks of $\pi_{0.5}$. SAE is a sparse but imperfect intervention basis: usability varies with architecture and intervention site, and aggressive intervention reveals safety and interpretability limits. Overall, event-grounded SAE analysis emerges as a practical starting point for behavior-anchored VLA interpretability, motivating future work on SAE features beyond action-aligned coordinates, finer-grained closed-loop evaluation, and safe interventions for high-stakes VLA deployments. Code is available at https://github.com/xc-j/Event-SAE.
-  topics: [ "Explainable AI", "Robotics" ]
-  selected: true
-  equal_contribution: false
-
 # Item 2
 - id: sheng2026arxiv
   image: /assets/img/publications/sheng2026arxiv.png
@@ -162,5 +91,138 @@
   abstract: |
     Diffusion policies enable multimodal robot behavior but offer limited ability to choose among behavior modes at inference time, even though such control is desirable in human-robot settings. Prior solutions to this lack of control have utilized Signal Temporal Logic (STL) to express human intentions and provide corresponding guidance for diffusion policy inference. However, these approaches can only guide diffusion policies that jointly generate future actions and states, increasing both complexity and runtime. We propose a novel guidance method for action-only diffusion policies that uses a separate learned world model to enable differentiable evaluation of STL robustness, with its gradient then injected into the diffusion process. This steers behavior toward constraint satisfaction without retraining, improving constraint adherence while preserving task performance. On the Can Transport task from Robomimic, our method maintains 100% task success while reducing constraint violations from over 80% for baseline methods to 4%. We also discuss extensions toward improved robustness and more complex constraints.
   topics: [ "Robotics" ]
+  selected: true
+  equal_contribution: false
+
+# Accepted conference papers, 2026
+- id: jin2026arxiv
+  image: /assets/img/publications/blank-publication.svg
+  image_placeholder: true
+  title: "Event-Grounded Sparse Autoencoders for Vision-Language-Action Policies"
+  authors:
+    - name: "Xinchen Jin"
+    - name: "Aditya Chatterjee"
+    - name: "Pranav Kumar"
+    - name: "Rohan Paleja"
+      me: true
+  venue_short: "NeurIPS"
+  venue_full: "Conference on Neural Information Processing Systems (NeurIPS), 2026."
+  year: 2026
+  bibtex: |
+    @inproceedings{jin2026arxiv,
+      title = {Event-Grounded Sparse Autoencoders for Vision-Language-Action Policies},
+      author = {Xinchen Jin and Aditya Chatterjee and Pranav Kumar and Rohan Paleja},
+      booktitle = {Conference on Neural Information Processing Systems ({NeurIPS})},
+      year = {2026}
+    }
+  badge_class: "light-blue darken-1"
+  badge_url: "https://neurips.cc/"
+  links:
+    - name: "Abstract"
+      url: ""
+    - name: "PDF"
+      url: ""
+    - name: "Code"
+      url: "https://github.com/xc-j/Event-SAE"
+  abstract: ""
+  topics: ["Explainable AI", "Robotics"]
+  selected: true
+  equal_contribution: false
+
+- id: sane2026a
+  image: /assets/img/publications/blank-publication.svg
+  image_placeholder: true
+  title: "Differentiable Belief-based Opponent Shaping"
+  authors:
+    - name: "Aarav Sane"
+    - name: "Karthik Sivachandran"
+    - name: "Rohan Paleja"
+      me: true
+  venue_short: "NeurIPS"
+  venue_full: "Conference on Neural Information Processing Systems (NeurIPS), 2026."
+  year: 2026
+  bibtex: |
+    @inproceedings{sane2026a,
+      title = {Differentiable Belief-based Opponent Shaping},
+      author = {Aarav Sane and Karthik Sivachandran and Rohan Paleja},
+      booktitle = {Conference on Neural Information Processing Systems ({NeurIPS})},
+      year = {2026}
+    }
+  badge_class: "light-blue darken-1"
+  badge_url: "https://neurips.cc/"
+  links:
+    - name: "Abstract"
+      url: ""
+    - name: "PDF"
+      url: ""
+  abstract: ""
+  topics: ["Multi-Agent Reinforcement Learning", "Human-Machine Teaming"]
+  selected: true
+  equal_contribution: false
+
+- id: sivachandran2026neurips
+  image: /assets/img/publications/blank-publication.svg
+  image_placeholder: true
+  title: "Mitigating Retaliatory Algorithmic Collusion in Repeated Games"
+  authors:
+    - name: "Karthik Sivachandran"
+    - name: "Rohan Paleja"
+      me: true
+  venue_short: "NeurIPS"
+  venue_full: "Conference on Neural Information Processing Systems (NeurIPS), 2026."
+  year: 2026
+  bibtex: |
+    @inproceedings{sivachandran2026neurips,
+      title = {Mitigating Retaliatory Algorithmic Collusion in Repeated Games},
+      author = {Karthik Sivachandran and Rohan Paleja},
+      booktitle = {Conference on Neural Information Processing Systems ({NeurIPS})},
+      year = {2026}
+    }
+  badge_class: "light-blue darken-1"
+  badge_url: "https://neurips.cc/"
+  links:
+    - name: "Abstract"
+      url: ""
+    - name: "PDF"
+      url: ""
+  abstract: ""
+  topics: ["Multi-Agent Reinforcement Learning"]
+  selected: true
+  equal_contribution: false
+
+- id: gagvani2026corl
+  image: /assets/img/publications/blank-publication.svg
+  image_placeholder: true
+  title: "Mechanistic Interpretability for End-to-End Self-Driving"
+  authors:
+    - name: "Manav Gagvani"
+    - name: "Benjamin Namikas"
+    - name: "Sivamurugan Velmurugan"
+    - name: "Nysa Kumar"
+    - name: "Shrey Sharma"
+    - name: "Thomas Peterson"
+    - name: "Pratyush Mathur"
+    - name: "Hyunseo Chang"
+    - name: "Rohan Paleja"
+      me: true
+  venue_short: "CoRL"
+  venue_full: "Conference on Robot Learning (CoRL), 2026."
+  year: 2026
+  bibtex: |
+    @inproceedings{gagvani2026corl,
+      title = {Mechanistic Interpretability for End-to-End Self-Driving},
+      author = {Manav Gagvani and Benjamin Namikas and Sivamurugan Velmurugan and Nysa Kumar and Shrey Sharma and Thomas Peterson and Pratyush Mathur and Hyunseo Chang and Rohan Paleja},
+      booktitle = {Conference on Robot Learning ({CoRL})},
+      year = {2026}
+    }
+  badge_class: "light-blue darken-1"
+  badge_url: "https://www.corl.org/"
+  links:
+    - name: "Abstract"
+      url: ""
+    - name: "PDF"
+      url: ""
+  abstract: ""
+  topics: ["Explainable AI", "Autonomous Driving"]
   selected: true
   equal_contribution: false
