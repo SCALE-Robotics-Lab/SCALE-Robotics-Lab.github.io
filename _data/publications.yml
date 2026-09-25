@@ -9,6 +9,16 @@
   venue_short: "arXiv"
   venue_full: "arXiv CS."
   year: 2026
+  bibtex: |
+    @misc{sane2026a,
+      title = {Differentiable Belief-Based Opponent Shaping},
+      author = {Aarav Sane and Karthik Sivachandran and Rohan Paleja},
+      howpublished = {{arXiv} preprint {arXiv}:2605.29042},
+      eprint = {2605.29042},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/pdf/2605.29042}
+    }
   badge_class: "pink darken-1"
   badge_url: "https://arxiv.org/archive/cs"
   links:
@@ -34,6 +44,16 @@
   venue_short: "arXiv"
   venue_full: "arXiv CS."
   year: 2026
+  bibtex: |
+    @misc{jin2026arxiv,
+      title = {Event-Grounded Sparse Autoencoders for Vision-Language-Action Policies},
+      author = {Xinchen Jin and Aditya Chatterjee and Pranav Kumar and Rohan Paleja},
+      howpublished = {{arXiv} preprint {arXiv}:2605.17204},
+      eprint = {2605.17204},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/pdf/2605.17204}
+    }
   badge_class: "pink darken-1"
   badge_url: "https://arxiv.org/archive/cs"
   links:
@@ -59,6 +79,16 @@
   venue_short: "arXiv"
   venue_full: "arXiv CS."
   year: 2026
+  bibtex: |
+    @misc{sheng2026arxiv,
+      title = {Beyond Partner Diversity: An Influence-Based Team Steering Framework for Zero-Shot Human-Machine Teaming},
+      author = {Wei Sheng and Rohan Paleja},
+      howpublished = {{arXiv} preprint {arXiv}:2605.15400},
+      eprint = {2605.15400},
+      archivePrefix = {arXiv},
+      year = {2026},
+      url = {https://arxiv.org/pdf/2605.15400}
+    }
   badge_class: "pink darken-1"
   badge_url: "https://arxiv.org/archive/cs"
   links:
@@ -82,6 +112,14 @@
   venue_short: "ICLR W."
   venue_full: "ICLR 2026 Workshop on AI for Mechanism Design and Strategic Decision Making"
   year: 2026
+  bibtex: |
+    @inproceedings{sheng2026aims,
+      title = {Influence-Salient Coordination Shaping for Scalable Cooperative {MARL}},
+      author = {Wei Sheng and Rohan Paleja},
+      booktitle = {{ICLR} Workshop on {AI} for Mechanism Design and Strategic Decision Making},
+      year = {2026},
+      url = {https://openreview.net/pdf?id=DYhUVbmBFT}
+    }
   badge_class: "pink darken-1"
   badge_url: "https://alimama-tech.github.io/aims-2026/#"
   links:
@@ -106,6 +144,14 @@
   venue_short: "ICRA W."
   venue_full: "ICRA 2026 Workshop on Bridging the Gap between Robot Learning and Human-Robot Interaction"
   year: 2026
+  bibtex: |
+    @inproceedings{zoellner2026temporal,
+      title = {Temporal Logic Guidance for Action-Only Diffusion Policies with World Models},
+      author = {Moritz Zoellner and Anastasios Manganaris and Rohan Paleja},
+      booktitle = {{ICRA} Workshop on Bridging the Gap between Robot Learning and Human-Robot Interaction},
+      year = {2026},
+      url = {https://arxiv.org/pdf/2606.22729}
+    }
   badge_class: "pink darken-1"
   badge_url: "https://sites.google.com/vt.edu/icra2026-learning-hri"
   links:
