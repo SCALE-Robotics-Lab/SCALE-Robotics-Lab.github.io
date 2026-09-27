@@ -50,6 +50,12 @@ phd:
     # linkedin: "https://linkedin.com"
     bio: "My current research focuses on the organization of large-scale multi-agent systems with learning. The idea is to leverage structured learning via a hierarchy to reduce the computational demands of deploying these agents."
 
+  - name: "Jialong Ning"
+    role: "Ph.D. Student"
+    photo: "/assets/img/ning.jpg"
+    linkedin: "https://www.linkedin.com/in/niko-ning/"
+    bio: "My current research focuses on multi-agent systems."
+
 masters:
   - name: "Harshit Moondra"
     role: "M.S. Student"
