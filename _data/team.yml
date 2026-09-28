@@ -54,7 +54,7 @@ phd:
     role: "Ph.D. Student"
     photo: "/assets/img/ning.jpg"
     linkedin: "https://www.linkedin.com/in/niko-ning/"
-    bio: "My current research focuses on multi-agent systems."
+    bio: "My current research focuses on multi-agent systems and robot learning, with the goal of enabling multiple robots to coordinate effectively on collaborative manipulation tasks."
 
 masters:
   - name: "Harshit Moondra"
