@@ -524,8 +524,7 @@
                     <h5 class="publication-title mb-1">{{ pub.title }}</h5>
                     <p class="publication-authors mb-1">
                         {% for author_obj in pub.authors %}
-                        {% if author_obj.me %}<strong>{{ author_obj.name }}</strong>{% else %}{{ author_obj.name }}{%
-                        endif %}
+                        {{ author_obj.name }}
                         {% if author_obj.equal_contribution_marker == true %}<em>*</em>{% endif %}
                         {% unless forloop.last %}, {% endunless %}
                         {% endfor %}
