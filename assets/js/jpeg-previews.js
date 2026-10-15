@@ -61,7 +61,7 @@
     }
 
     function convertImage(image) {
-        if (image.classList.contains('lab-gallery-lightbox-image')) return;
+        if (image.matches('.lab-gallery-lightbox-image, .publication-lightbox-image')) return;
 
         const sourceValue = image.dataset.fullSrc || image.currentSrc || image.src;
         if (!sourceValue || !canConvert(sourceValue)) return;
