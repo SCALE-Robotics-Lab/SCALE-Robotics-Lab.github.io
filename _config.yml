@@ -1,8 +1,8 @@
-title: Rohan Paleja - Personal Academic Website
+title: Purdue SCALE Robotics Lab Webpage
 author: Rohan Paleja
-description: >- # Your site's description
-  Personal academic website of Rohan Paleja, Assistant Professor at Purdue.
-url: "https://rohanpaleja.com"  # VERY IMPORTANT: Your site's full URL
+description: >-
+  SCALE Robotics Lab led by Dr. Rohan Paleja at Purdue University.
+url: "https://scaleroboticslab.com"
 baseurl: ""                   # VERY IMPORTANT: Keep this empty
 
 theme: jekyll-theme-minimal

@@ -6,8 +6,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>SCALE Robotics Lab @ Purdue University</title>
-    <meta name="description" content="SCALE Robotics Lab led by Dr. Rohan Paleja at Purdue University">
+    <title>{{ site.title | escape }}</title>
+    <meta name="description" content="{{ site.description | strip | escape }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ site.title | escape }}">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:description" content="{{ site.description | strip | escape }}">
+    <meta property="og:url" content="{{ '/' | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/img/scale_logo.png' | absolute_url }}">
+    <meta property="og:image:alt" content="SCALE Robotics Lab logo">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ site.title | escape }}">
+    <meta name="twitter:description" content="{{ site.description | strip | escape }}">
+    <meta name="twitter:image" content="{{ '/assets/img/scale_logo.png' | absolute_url }}">
+    <meta name="twitter:image:alt" content="SCALE Robotics Lab logo">
 
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"/>
@@ -19,7 +33,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/bibtex.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/publication-lightbox.css' | relative_url }}">
     <script src="{{ '/assets/js/publication-lightbox.js' | relative_url }}" defer></script>
-    <link rel="canonical" href="/">
+    <link rel="canonical" href="{{ '/' | absolute_url }}">
     <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
     <script src="./main.js"></script>
     <script src="./scroll.js"></script>
