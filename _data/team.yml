@@ -81,6 +81,13 @@ masters:
     website: "https://moritz-zoellner.com/"
     linkedin: "https://www.linkedin.com/in/moritzzoellner/"
     bio: "I am broadly interested in robot learning and embodied AI, especially the long-term goal of building generalist robots that solve complex tasks by learning from humans, improving through experience, and understanding the physical world."
+  - name: "Angad Singh Kochhar"
+    role: "M.S. Student"
+    photo: "/assets/img/Angad.jpg"
+    # github: "https://github.com/AngadQ"
+    website: "https://angadq.github.io/"
+    linkedin: "https://www.linkedin.com/in/angad-singh-kochhar/"
+    bio: "My research interests lie in multi-agent systems and robot learning. I am especially curious about how complex behaviors can emerge from simple objectives, and how multiple simple robots can reach consensus and coordinate their actions."
 
 
 undergrad:
