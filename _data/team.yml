@@ -56,6 +56,15 @@ phd:
     linkedin: "https://www.linkedin.com/in/niko-ning/"
     bio: "My current research focuses on multi-agent systems and robot learning, with the goal of enabling multiple robots to coordinate effectively on collaborative manipulation tasks."
 
+  - name: "Pragathi Durga Rajarajan"
+    role: "Ph.D. Student"
+    photo: "/assets/img/durga_rajarajan.jpg"
+    website: "https://pdr24.github.io/"
+    github: "https://github.com/pdr24"
+    linkedin: "https://www.linkedin.com/in/pragathi-durga-rajarajan"
+    bio: "My research interests lie in mechanistic interpretability and multi-agent systems, with the goal of understanding agent behavior and interactions to build reliable AI systems for critical domains."
+
+
 masters:
   - name: "Harshit Moondra"
     role: "M.S. Student"
