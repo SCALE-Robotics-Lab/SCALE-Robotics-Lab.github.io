@@ -88,7 +88,13 @@ masters:
     website: "https://angadq.github.io/"
     linkedin: "https://www.linkedin.com/in/angad-singh-kochhar/"
     bio: "My research interests lie in multi-agent systems and robot learning. I am especially curious about how complex behaviors can emerge from simple objectives, and how multiple simple robots can reach consensus and coordinate their actions."
-
+  - name: "Tristan Brideweser"
+    role: "M.S. Student"
+    photo: "/assets/img/tristanbrideweser.jpg"
+    website: "https://tristanbrideweser.me"
+    github: "https://github.com/tristanbrideweser"
+    linkedin: "https://www.linkedin.com/in/tristanbrideweser"
+    bio: "My research interests include learning interpretable multi-agent behavior from demonstration, and using world models to ground robot policies."
 
 undergrad:
   - name: "Aditya Chatterjee"
